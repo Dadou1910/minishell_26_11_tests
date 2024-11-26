@@ -6,7 +6,7 @@
 /*   By: abremont <abremont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 01:25:41 by jealefev          #+#    #+#             */
-/*   Updated: 2024/11/26 08:22:55 by abremont         ###   ########.fr       */
+/*   Updated: 2024/11/26 09:19:27 by abremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,8 +93,8 @@ int	check_pair_quotes(t_command *cmd)
 		i++;
 	}
 	if ((count_sq % 2) || (count_dq % 2))
-		return (0);
-	return (1);
+		return (1);
+	return (0);
 }
 
 

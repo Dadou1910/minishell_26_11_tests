@@ -6,7 +6,7 @@
 /*   By: abremont <abremont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 14:03:20 by jealefev          #+#    #+#             */
-/*   Updated: 2024/11/26 08:43:42 by abremont         ###   ########.fr       */
+/*   Updated: 2024/11/26 09:13:00 by abremont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,14 +86,15 @@ int	main(int argc, char **argv, char **envp)
 	char	**env;
 
 	return_value = 0;
+	env = get_env(envp);
 	(void)argc;
 	(void)argv;
 	while (1)
 	{
-		if (!env)
-			env = get_env(envp);
 		signal(SIGINT, &sig_int);
 		signal(SIGQUIT, &sig_quit);
+		if (!env)
+			env = get_env(envp);
 		line = read_input(env);
 		if (!line)
 			break;
