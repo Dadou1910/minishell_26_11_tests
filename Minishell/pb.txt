@@ -1,0 +1,16 @@
+- "cat lol.c | cat > lol.c"
+- valeur invalide
+- export/env leak
+- echo ' ' = ' ' but shld b empty
+-leak unset $path
+
+
+-==3363540==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+-==3363540==    by 0x4051F6: initialize_t_command (utils.c:37)
+
+
+-leak lie a state
+
+
+-hell >> grep u < poule
+-==3368796== Warning: invalid file descriptor -2 in syscall close()
